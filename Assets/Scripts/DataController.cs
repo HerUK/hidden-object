@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class DataController : MonoBehaviour {
@@ -37,15 +38,81 @@ public class DataController : MonoBehaviour {
 
     public int HintPerHour = 1;
 
+
+
+    public string gameDataProjectFilePath = "/game.json";
+
+    GameData _gameData;
+    public GameData gameData
+    {
+        get
+        {
+            if (_gameData == null)
+            {
+                LoadGameData();
+            }
+            return _gameData;
+        }
+    }
+
+    StageData _stageData;
+    public StageData stageData
+    {
+        get
+        {
+            if (_stageData == null)
+            {
+                LoadStageData();
+            }
+            return _stageData;
+        }
+    }
     
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void LoadStageData()
+    {
+        TextAsset json = Resources.Load("MetaData/Stage1") as TextAsset;
+        Debug.Log(json.text);
+        _stageData = JsonUtility.FromJson<StageData>(json.text);
+
+        foreach (Item item in _stageData.ItemList)
+        {
+            Debug.Log(item.Name);
+        }
+
+    }
+
+
+    public void LoadGameData()
+    {
+        string filePath = Application.persistentDataPath + gameDataProjectFilePath;
+
+        if (File.Exists(filePath))
+        {
+            Debug.Log("loaded!");
+            string dataAsJson = File.ReadAllText(filePath);
+            _gameData = JsonUtility.FromJson<GameData>(dataAsJson);
+        }
+        else
+        {
+            Debug.Log("Create new");
+
+            _gameData = new GameData();
+            _gameData.TimePassed = 0;
+            _gameData.Score = 1;
+            _gameData.Hint = 0;
+
+        }
+    }
+
+    public void SaveGameData()
+    {
+
+        string dataAsJson = JsonUtility.ToJson(gameData);
+
+        string filePath = Application.persistentDataPath + gameDataProjectFilePath;
+        File.WriteAllText(filePath, dataAsJson);
+
+    }
+
 }

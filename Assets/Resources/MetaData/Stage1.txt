@@ -1,0 +1,95 @@
+﻿{
+	"ItemList":
+	[
+		{
+			"SpriteName":"ax",
+			"Name":"Ax",
+
+			"PosX":-21.28802,
+			"PosY":77.20001,
+			
+			"Width":42,
+			"Height":95.1
+		},
+		{
+
+			"SpriteName":"brush",
+			"Name":"Brush",
+
+			"PosX":568.8,
+			"PosY":-54.20001,
+			
+			"Width":75.1,
+			"Height":33.3
+		},
+		{
+			"SpriteName":"ice-cream",
+			"Name":"IceCream",
+
+			"PosX":-731.2101,
+			"PosY":-409.9863,
+			
+			"Width":37.6,
+			"Height":70.9
+		},
+		{
+
+			"SpriteName":"ruler",
+			"Name":"Ruler",
+
+			"PosX":107.7,
+			"PosY":-86.20001,
+			
+			"Width":37.3,
+			"Height":55.2
+		},
+		{
+
+			"SpriteName":"needle",
+			"Name":"Needle",
+
+			"PosX":-366.4101,
+			"PosY":-155.0864,
+			
+			"Width":26.3,
+			"Height":146.5
+
+		},
+		{
+
+			"SpriteName":"pencil",
+			"Name":"Pencel",
+
+			"PosX":-333.3101,
+			"PosY":132.3137,
+			
+			"Width":20.7,
+			"Height":71
+
+		},
+		{
+
+			"SpriteName":"pizza",
+			"Name":"Pizza",
+
+			"PosX":293.8,
+			"PosY":-160,
+			
+			"Width":83,
+			"Height":109
+
+		},
+		{
+
+			"SpriteName":"acorn",
+			"Name":"Acorn",
+
+			"PosX":132.33,
+			"PosY":171.3,
+			
+			"Width":23.46,
+			"Height":48.4
+
+		}
+	]
+}
