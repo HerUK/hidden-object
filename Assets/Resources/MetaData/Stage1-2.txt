@@ -1,8 +1,13 @@
 ﻿{
+	"BgImg":"2/image",
+
+	"Width":900,
+	"Height":1440,
+
 	"ItemList":
 	[
 		{
-			"SpriteName":"ax",
+			"SpriteName":"2/ax",
 			"Name":"Ax",
 
 			"PosX":-21.28802,
@@ -13,7 +18,7 @@
 		},
 		{
 
-			"SpriteName":"brush",
+			"SpriteName":"2/gloves",
 			"Name":"Brush",
 
 			"PosX":568.8,
@@ -23,7 +28,7 @@
 			"Height":33.3
 		},
 		{
-			"SpriteName":"ice-cream",
+			"SpriteName":"1/ice-cream",
 			"Name":"IceCream",
 
 			"PosX":-731.2101,
@@ -34,7 +39,7 @@
 		},
 		{
 
-			"SpriteName":"ruler",
+			"SpriteName":"1/ruler",
 			"Name":"Ruler",
 
 			"PosX":107.7,
@@ -45,7 +50,7 @@
 		},
 		{
 
-			"SpriteName":"needle",
+			"SpriteName":"1/needle",
 			"Name":"Needle",
 
 			"PosX":-366.4101,
@@ -57,7 +62,7 @@
 		},
 		{
 
-			"SpriteName":"pencil",
+			"SpriteName":"1/pencil",
 			"Name":"Pencel",
 
 			"PosX":-333.3101,
@@ -69,7 +74,7 @@
 		},
 		{
 
-			"SpriteName":"pizza",
+			"SpriteName":"1/pizza",
 			"Name":"Pizza",
 
 			"PosX":293.8,
@@ -81,7 +86,7 @@
 		},
 		{
 
-			"SpriteName":"acorn",
+			"SpriteName":"1/acorn",
 			"Name":"Acorn",
 
 			"PosX":132.33,

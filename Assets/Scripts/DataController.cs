@@ -33,6 +33,7 @@ public class DataController : MonoBehaviour {
     }
     // Singleton class end
 
+    public string StageNum;
 
     public int Hint = 5;
 
@@ -71,7 +72,7 @@ public class DataController : MonoBehaviour {
 
     public void LoadStageData()
     {
-        TextAsset json = Resources.Load("MetaData/Stage1") as TextAsset;
+        TextAsset json = Resources.Load("MetaData/Stage"+StageNum) as TextAsset;
         Debug.Log(json.text);
         _stageData = JsonUtility.FromJson<StageData>(json.text);
 
@@ -114,5 +115,4 @@ public class DataController : MonoBehaviour {
         File.WriteAllText(filePath, dataAsJson);
 
     }
-
 }

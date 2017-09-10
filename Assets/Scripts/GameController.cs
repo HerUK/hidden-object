@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour {
 
     public Transform content;
 
+    public Image BgImg;
+    public RectTransform rectContent, rectBgImg;
+
 
     // Use this for initialization
     void Start () {
@@ -60,6 +63,19 @@ public class GameController : MonoBehaviour {
 
     public void InitStageData()
     {
+        
+        BgImg.sprite = Resources.Load<Sprite>("Sprites/" + DataController.Instance.stageData.BgImg);
+
+        Vector2 size = rectBgImg.sizeDelta;
+        size.x = DataController.Instance.stageData.Width;
+        size.y = DataController.Instance.stageData.Height;
+        rectBgImg.sizeDelta = size;
+
+        size = rectContent.sizeDelta;
+        size.x = DataController.Instance.stageData.Width;
+        size.y = DataController.Instance.stageData.Height;
+        rectContent.sizeDelta = size;
+
         List<Item> list = DataController.Instance.stageData.ItemList;
         foreach(Item item in list)
         {
@@ -74,7 +90,7 @@ public class GameController : MonoBehaviour {
             pos.y = item.PosY;
             rect.anchoredPosition = pos;
 
-            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/1/" + item.SpriteName);
+            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
 
 
             rect.sizeDelta = new Vector2(item.Width, item.Height);
