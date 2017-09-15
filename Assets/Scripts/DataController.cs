@@ -39,6 +39,8 @@ public class DataController : MonoBehaviour {
 
     public int HintPerHour = 1;
 
+    public string ItemListNum;
+
 
 
     public string gameDataProjectFilePath = "/game.json";
@@ -77,6 +79,34 @@ public class DataController : MonoBehaviour {
         _stageData = JsonUtility.FromJson<StageData>(json.text);
 
         foreach (Item item in _stageData.ItemList)
+        {
+            Debug.Log(item.Name);
+        }
+
+    }
+
+
+    ItemListData _itemListData;
+    public ItemListData itemListData
+    {
+        get
+        {
+            if (_itemListData == null)
+            {
+                LoadItemListData();
+            }
+            return _itemListData;
+        }
+    }
+
+
+    public void LoadItemListData()
+    {
+        TextAsset json = Resources.Load("MetaData/Item"+ItemListNum) as TextAsset;
+        Debug.Log(json.text);
+        _itemListData = JsonUtility.FromJson<ItemListData>(json.text);
+
+        foreach (Item item in _itemListData.ItemList)
         {
             Debug.Log(item.Name);
         }

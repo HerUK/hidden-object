@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour {
     public void InitStageData()
     {
         
-        BgImg.sprite = Resources.Load<Sprite>("Sprites/" + DataController.Instance.stageData.BgImg);
+        BgImg.sprite = Resources.Load<Sprite>("Sprites/First/1/Stage" + DataController.Instance.stageData.BgImg);
 
         Vector2 size = rectBgImg.sizeDelta;
         size.x = DataController.Instance.stageData.Width;
@@ -90,7 +90,34 @@ public class GameController : MonoBehaviour {
             pos.y = item.PosY;
             rect.anchoredPosition = pos;
 
-            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
+            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/First/1/Stage" + item.SpriteName);
+
+
+            rect.sizeDelta = new Vector2(item.Width, item.Height);
+
+
+        }
+    }
+
+
+    public void InitItemListData()
+    {
+
+        List<Item> list = DataController.Instance.ItemListData.ItemList;
+        foreach (Item item in list)
+        {
+            Debug.Log(item.Name);
+            GameObject prefab = Resources.Load("Prefabs/HiddenObject") as GameObject;
+            GameObject obj = Instantiate(prefab, content);
+            obj.name = item.Name;
+            var rect = obj.GetComponent<RectTransform>();
+
+            Vector2 pos = rect.anchoredPosition;
+            pos.x = item.PosX;
+            pos.y = item.PosY;
+            rect.anchoredPosition = pos;
+
+            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/First/1/Item" + item.SpriteName);
 
 
             rect.sizeDelta = new Vector2(item.Width, item.Height);

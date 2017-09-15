@@ -7,7 +7,7 @@
 	"ItemList":
 	[
 		{
-			"SpriteName":"1/ax",
+			"SpriteName":"First/1/Stage/ax",
 			"Name":"Ax",
 
 			"PosX":-21.28802,
@@ -18,7 +18,7 @@
 		},
 		{
 
-			"SpriteName":"1/brush",
+			"SpriteName":"First/1/Stage/brush",
 			"Name":"Brush",
 
 			"PosX":568.8,
@@ -28,7 +28,7 @@
 			"Height":33.3
 		},
 		{
-			"SpriteName":"1/ice-cream",
+			"SpriteName":"First/1/Stage/ice-cream",
 			"Name":"IceCream",
 
 			"PosX":-731.2101,
@@ -39,7 +39,7 @@
 		},
 		{
 
-			"SpriteName":"1/ruler",
+			"SpriteName":"First/1/Stage/ruler",
 			"Name":"Ruler",
 
 			"PosX":107.7,
@@ -50,7 +50,7 @@
 		},
 		{
 
-			"SpriteName":"1/needle",
+			"SpriteName":"First/1/Stage/needle",
 			"Name":"Needle",
 
 			"PosX":-366.4101,
@@ -62,7 +62,7 @@
 		},
 		{
 
-			"SpriteName":"1/pencil",
+			"SpriteName":"First/1/Stage/pencil",
 			"Name":"Pencel",
 
 			"PosX":-333.3101,
@@ -74,7 +74,7 @@
 		},
 		{
 
-			"SpriteName":"1/pizza",
+			"SpriteName":"First/1/Stage/pizza",
 			"Name":"Pizza",
 
 			"PosX":293.8,
@@ -86,7 +86,7 @@
 		},
 		{
 
-			"SpriteName":"1/acorn",
+			"SpriteName":"First/1/Stage/acorn",
 			"Name":"Acorn",
 
 			"PosX":132.33,
