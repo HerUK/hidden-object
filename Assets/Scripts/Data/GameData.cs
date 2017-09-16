@@ -8,5 +8,6 @@ public class GameData {
     public int Score = 0;
     public int Hint = 0;
     public float TimePassed = 0f;
+    public string LastHintAt;
 
 }

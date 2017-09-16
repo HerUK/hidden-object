@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Purchasing;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
@@ -11,6 +12,7 @@ public class GameController : MonoBehaviour {
     public AudioClip SFXClick;
 
     public Transform content;
+    public Transform bottomContent;
 
     public Image BgImg;
     public RectTransform rectContent, rectBgImg;
@@ -19,30 +21,20 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        TextHint.text = DataController.Instance.Hint.ToString();
-        StartCoroutine(StartConllectHint());
+        //StartCoroutine(StartConllectHint());
         DataController.Instance.LoadStageData();
-
+        DataController.Instance.LoadGameData();
         InitStageData();
-	}
-	
-    IEnumerator StartConllectHint()
-    {
-        while (true)
-        {
-            yield return new WaitForSecondsRealtime(1f);
-            DataController.Instance.Hint += DataController.Instance.HintPerHour;
-            TextHint.text = DataController.Instance.Hint.ToString();
-
- 
-        }
+        InitItemListData();
 
     }
+	
 
     // Update is called once per frame
     void Update()
     {
 
+        TextHint.text = DataController.Instance.gameData.Hint.ToString();
         if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log(Input.mousePosition);
@@ -64,7 +56,7 @@ public class GameController : MonoBehaviour {
     public void InitStageData()
     {
         
-        BgImg.sprite = Resources.Load<Sprite>("Sprites/First/1/Stage" + DataController.Instance.stageData.BgImg);
+        BgImg.sprite = Resources.Load<Sprite>("Sprites/" + DataController.Instance.stageData.BgImg);
 
         Vector2 size = rectBgImg.sizeDelta;
         size.x = DataController.Instance.stageData.Width;
@@ -90,7 +82,7 @@ public class GameController : MonoBehaviour {
             pos.y = item.PosY;
             rect.anchoredPosition = pos;
 
-            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/First/1/Stage" + item.SpriteName);
+            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
 
 
             rect.sizeDelta = new Vector2(item.Width, item.Height);
@@ -102,22 +94,22 @@ public class GameController : MonoBehaviour {
 
     public void InitItemListData()
     {
-
-        List<Item> list = DataController.Instance.ItemListData.ItemList;
+        int i = 0;
+        List<Item> list = DataController.Instance.stageData.ItemList;
         foreach (Item item in list)
         {
             Debug.Log(item.Name);
-            GameObject prefab = Resources.Load("Prefabs/HiddenObject") as GameObject;
-            GameObject obj = Instantiate(prefab, content);
+            GameObject prefab = Resources.Load("Prefabs/BottomObject") as GameObject;
+            GameObject obj = Instantiate(prefab, bottomContent);
             obj.name = item.Name;
             var rect = obj.GetComponent<RectTransform>();
 
             Vector2 pos = rect.anchoredPosition;
-            pos.x = item.PosX;
-            pos.y = item.PosY;
+            pos.x = -435f + 125f*i;
+            pos.y = 70f;
             rect.anchoredPosition = pos;
-
-            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/First/1/Item" + item.SpriteName);
+            i++;
+            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
 
 
             rect.sizeDelta = new Vector2(item.Width, item.Height);
@@ -126,6 +118,10 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    public void PurchaseComplete(Product p)
+    {
+        Debug.Log(p.metadata.localizedTitle + " purchase success!");
+    }
 
 
 }

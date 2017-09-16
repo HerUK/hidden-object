@@ -1,5 +1,5 @@
 ﻿{
-	"BgImg":"1/bg",
+	"BgImg":"First/1/Stage/bg",
 
 	"Width":1501,
 	"Height":1501,
@@ -78,7 +78,7 @@
 			"Name":"Pizza",
 
 			"PosX":293.8,
-			"PosY":-160,
+			"PosY":-107,
 			
 			"Width":83,
 			"Height":109

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -33,11 +34,7 @@ public class DataController : MonoBehaviour {
     }
     // Singleton class end
 
-    public string StageNum;
-
-    public int Hint = 5;
-
-    public int HintPerHour = 1;
+    public string StageNum = "1-1";
 
     public string ItemListNum;
 
@@ -118,6 +115,7 @@ public class DataController : MonoBehaviour {
     {
         string filePath = Application.persistentDataPath + gameDataProjectFilePath;
 
+        Debug.Log(filePath);
         if (File.Exists(filePath))
         {
             Debug.Log("loaded!");
@@ -134,6 +132,23 @@ public class DataController : MonoBehaviour {
             _gameData.Hint = 0;
 
         }
+        CheckDailyHint();
+    }
+
+    public void CheckDailyHint()
+    {
+        if(gameData.LastHintAt == null)
+        {
+            gameData.Hint += 2;
+            gameData.LastHintAt = DateTime.Now.ToString();
+            SaveGameData();
+        }else if(DateTime.Now.Day != DateTime.Parse(gameData.LastHintAt).Day)
+        {
+            gameData.Hint += 2;
+            gameData.LastHintAt = DateTime.Now.ToString();
+            SaveGameData();
+
+        }
     }
 
     public void SaveGameData()
@@ -142,6 +157,7 @@ public class DataController : MonoBehaviour {
         string dataAsJson = JsonUtility.ToJson(gameData);
 
         string filePath = Application.persistentDataPath + gameDataProjectFilePath;
+        Debug.Log(filePath);
         File.WriteAllText(filePath, dataAsJson);
 
     }
