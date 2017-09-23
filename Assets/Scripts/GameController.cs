@@ -77,6 +77,12 @@ public class GameController : MonoBehaviour {
             obj.name = item.Name;
             var rect = obj.GetComponent<RectTransform>();
 
+
+            /**
+            GameObject.color = new Color(255, 255, 255, 0);
+            **/
+
+
             Vector2 pos = rect.anchoredPosition;
             pos.x = item.PosX;
             pos.y = item.PosY;
@@ -113,6 +119,10 @@ public class GameController : MonoBehaviour {
 
 
             rect.sizeDelta = new Vector2(item.Width, item.Height);
+
+            /**
+            rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
+            **/
 
 
         }
