@@ -89,7 +89,7 @@ public class GameController : MonoBehaviour {
             rect.anchoredPosition = pos;
 
             obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
-
+            obj.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
 
             rect.sizeDelta = new Vector2(item.Width, item.Height);
 

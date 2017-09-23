@@ -31,6 +31,8 @@ public class HiddenObject : MonoBehaviour {
 
             rt.sizeDelta = new Vector2(140f, 140f);
 
+            GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+
         }
 
     }
