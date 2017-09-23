@@ -78,9 +78,6 @@ public class GameController : MonoBehaviour {
             var rect = obj.GetComponent<RectTransform>();
 
 
-            /**
-            GameObject.color = new Color(255, 255, 255, 0);
-            **/
 
 
             Vector2 pos = rect.anchoredPosition;

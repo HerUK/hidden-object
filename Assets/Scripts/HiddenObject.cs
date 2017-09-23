@@ -29,9 +29,12 @@ public class HiddenObject : MonoBehaviour {
             pos.y = GetComponent<RectTransform>().anchoredPosition.y;
             rt.anchoredPosition = pos;
 
-            rt.sizeDelta = new Vector2(140f, 140f);
+            rt.sizeDelta = new Vector2(150f, 150f);
 
             GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+
+            Destroy(gameObject, 1f);
+            Destroy(circle, 1f);
 
         }
 
