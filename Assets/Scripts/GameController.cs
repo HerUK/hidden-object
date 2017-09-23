@@ -17,15 +17,21 @@ public class GameController : MonoBehaviour {
     public Image BgImg;
     public RectTransform rectContent, rectBgImg;
 
+    public int ObjectCount = 0;
+
+    public static GameController Instance;
+    public float gameStart;
+
 
     // Use this for initialization
     void Start () {
-
+        Instance = this;
         //StartCoroutine(StartConllectHint());
         DataController.Instance.LoadStageData();
         DataController.Instance.LoadGameData();
         InitStageData();
         InitItemListData();
+        gameStart = Time.time;
 
     }
 	
@@ -92,6 +98,24 @@ public class GameController : MonoBehaviour {
 
 
         }
+        ObjectCount = list.Count;
+    }
+
+    public void FindHiddenObject()
+    {
+        ObjectCount--;
+        if(ObjectCount == 0)
+        {
+            float timePassed = Time.time - gameStart;
+            int minutes = Mathf.FloorToInt(timePassed / 60);
+            int seconds = Mathf.FloorToInt(timePassed % 60);
+            string msg = string.Format("당신 기록 : {0}분 {1}초", minutes, seconds);
+            DialogDataAlert alert = new DialogDataAlert("전체 찾았습니다!", msg, delegate () {
+                DataController.Instance.StageNum++;
+                Application.LoadLevel("game");
+            });
+            DialogManager.Instance.Push(alert);
+        }
     }
 
 
@@ -105,6 +129,7 @@ public class GameController : MonoBehaviour {
             GameObject prefab = Resources.Load("Prefabs/BottomObject") as GameObject;
             GameObject obj = Instantiate(prefab, bottomContent);
             obj.name = item.Name;
+            /*obj.text = item.Name;*/
             var rect = obj.GetComponent<RectTransform>();
 
             Vector2 pos = rect.anchoredPosition;
@@ -119,6 +144,7 @@ public class GameController : MonoBehaviour {
 
             /**
             rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
+            rect.Rotation = new Vector2(item.Rotation);
             **/
 
 

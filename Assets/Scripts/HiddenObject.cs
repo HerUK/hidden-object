@@ -33,6 +33,8 @@ public class HiddenObject : MonoBehaviour {
 
             GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
 
+            GameController.Instance.FindHiddenObject();
+
             Destroy(gameObject, 1f);
             Destroy(circle, 1f);
 

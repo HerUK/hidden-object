@@ -34,7 +34,8 @@ public class DataController : MonoBehaviour {
     }
     // Singleton class end
 
-    public string StageNum = "1-1";
+    public int ChapterNum = 1;
+    public int StageNum = 1;
 
     public string ItemListNum;
 
@@ -71,7 +72,7 @@ public class DataController : MonoBehaviour {
 
     public void LoadStageData()
     {
-        TextAsset json = Resources.Load("MetaData/Stage"+StageNum) as TextAsset;
+        TextAsset json = Resources.Load("MetaData/Stage"+ ChapterNum + "-" + StageNum) as TextAsset;
         Debug.Log(json.text);
         _stageData = JsonUtility.FromJson<StageData>(json.text);
 
@@ -150,6 +151,15 @@ public class DataController : MonoBehaviour {
 
         }
     }
+    /*
+    public void FindObjcect()
+    {
+        if(gameData.FindObject == null)
+        {
+           DialogControllerAlert.get();
+        }
+    }
+    */
 
     public void SaveGameData()
     {
