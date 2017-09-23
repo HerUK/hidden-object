@@ -13,12 +13,12 @@ public class Item  {
 
     public float Width;
     public float Height;
+    public float BottomWidth;
+    public float BottomHeight;
 
     /**
     public float Color;
 
-    public float BottomWidth;
-    public float BottomHeight;
 
     **/
 }

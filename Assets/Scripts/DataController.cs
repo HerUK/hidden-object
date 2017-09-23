@@ -151,15 +151,7 @@ public class DataController : MonoBehaviour {
 
         }
     }
-    /*
-    public void FindObjcect()
-    {
-        if(gameData.FindObject == null)
-        {
-           DialogControllerAlert.get();
-        }
-    }
-    */
+
 
     public void SaveGameData()
     {

@@ -130,6 +130,7 @@ public class GameController : MonoBehaviour {
             GameObject obj = Instantiate(prefab, bottomContent);
             obj.name = item.Name;
             /*obj.text = item.Name;*/
+            obj.GetComponentInChildren<Text>().text = item.Name;
             var rect = obj.GetComponent<RectTransform>();
 
             Vector2 pos = rect.anchoredPosition;
@@ -137,10 +138,12 @@ public class GameController : MonoBehaviour {
             pos.y = 70f;
             rect.anchoredPosition = pos;
             i++;
-            obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
+            //obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
 
-
-            rect.sizeDelta = new Vector2(item.Width, item.Height);
+            obj.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName); ;
+            rect = obj.transform.GetChild(0).GetComponent<RectTransform>();
+            rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
+            //rect.Rotate(new Vector3(0, 0, 90f));
 
             /**
             rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);

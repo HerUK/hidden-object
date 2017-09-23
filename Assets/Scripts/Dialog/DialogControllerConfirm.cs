@@ -45,8 +45,7 @@ public class DialogControllerConfirm : DialogController
 
 		Debug.Log("OnClickOK");
 
-		// dismiss
-		DialogManager.Instance.Pop();
+        DialogManager.Instance.Pop();
     }
 
     public void OnClickCancel()
