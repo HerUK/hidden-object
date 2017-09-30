@@ -16,7 +16,8 @@
 			"Width":81.06,
 			"Height":54.3,
 			"BottomWidth":96,
-			"BottomHeight":67
+			"BottomHeight":67,
+			"BottomRotate":0
 		},
 		{
 
@@ -29,7 +30,8 @@
 			"Width":35.12,
 			"Height":117.71,
 			"BottomWidth":22,
-			"BottomHeight":80
+			"BottomHeight":80,
+			"BottomRotate":45
 		},
 		{
 			"SpriteName":"First/2/cake",
@@ -41,7 +43,8 @@
 			"Width":55.83,
 			"Height":73.59,
 			"BottomWidth":51,
-			"BottomHeight":69
+			"BottomHeight":69,
+			"BottomRotate":-90
 		},
 		{
 
@@ -54,7 +57,8 @@
 			"Width":70.68,
 			"Height":139.11,
 			"BottomWidth":44,
-			"BottomHeight":92
+			"BottomHeight":92,
+			"BottomRotate":0
 		},
 		{
 
@@ -67,7 +71,8 @@
 			"Width":95.02,
 			"Height":214.58,
 			"BottomWidth":40,
-			"BottomHeight":92
+			"BottomHeight":92,
+			"BottomRotate":-90
 		},
 		{
 
@@ -80,7 +85,8 @@
 			"Width":81.72,
 			"Height":48.01,
 			"BottomWidth":82,
-			"BottomHeight":54
+			"BottomHeight":54,
+			"BottomRotate":180
 		},
 		{
 
@@ -93,7 +99,8 @@
 			"Width":52.48,
 			"Height":175.75,
 			"BottomWidth":21,
-			"BottomHeight":74
+			"BottomHeight":74,
+			"BottomRotate":0
 		}
 	]
 }

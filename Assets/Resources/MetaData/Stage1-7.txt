@@ -16,7 +16,8 @@
 			"Width":199.5,
 			"Height":118.3,
 			"BottomWidth":117,
-			"BottomHeight":69
+			"BottomHeight":69,
+			"BottomRotate":-10
 		},
 		{
 
@@ -29,7 +30,8 @@
 			"Width":65.98,
 			"Height":80.04,
 			"BottomWidth":62,
-			"BottomHeight":75
+			"BottomHeight":75,
+			"BottomRotate":-10
 		},
 		{
 			"SpriteName":"First/7/brush",
@@ -41,7 +43,8 @@
 			"Width":64.19,
 			"Height":122.17,
 			"BottomWidth":48,
-			"BottomHeight":92
+			"BottomHeight":92,
+			"BottomRotate":0
 		},
 		{
 
@@ -54,7 +57,8 @@
 			"Width":63.18,
 			"Height":72.11,
 			"BottomWidth":70,
-			"BottomHeight":80
+			"BottomHeight":80,
+			"BottomRotate":-90
 		},
 		{
 
@@ -67,7 +71,8 @@
 			"Width":52.345,
 			"Height":67,
 			"BottomWidth":55,
-			"BottomHeight":70
+			"BottomHeight":70,
+			"BottomRotate":0
 		},
 		{
 
@@ -79,8 +84,9 @@
 			
 			"Width":96.74,
 			"Height":66.41,
-			"BottomWidth":107,
-			"BottomHeight":73
+			"BottomWidth":70,
+			"BottomHeight":40,
+			"BottomRotate":-90
 		},
 		{
 
@@ -92,8 +98,9 @@
 			
 			"Width":117.92,
 			"Height":58.61,
-			"BottomWidth":119,
-			"BottomHeight":59
+			"BottomWidth":80,
+			"BottomHeight":30,
+			"BottomRotate":-90
 		}
 	]
 }

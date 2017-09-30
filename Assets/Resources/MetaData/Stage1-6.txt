@@ -16,7 +16,8 @@
 			"Width":85.2,
 			"Height":76.5,
 			"BottomWidth":70,
-			"BottomHeight":62
+			"BottomHeight":62,
+			"BottomRotate":0
 		},
 		{
 
@@ -29,7 +30,8 @@
 			"Width":33.6,
 			"Height":70.8,
 			"BottomWidth":33,
-			"BottomHeight":70
+			"BottomHeight":70,
+			"BottomRotate":0
 		},
 		{
 			"SpriteName":"First/6/carrot",
@@ -41,7 +43,8 @@
 			"Width":71.8,
 			"Height":144.3,
 			"BottomWidth":43,
-			"BottomHeight":88
+			"BottomHeight":88,
+			"BottomRotate":0
 		},
 		{
 
@@ -54,7 +57,8 @@
 			"Width":98.3,
 			"Height":46.7,
 			"BottomWidth":75,
-			"BottomHeight":35
+			"BottomHeight":35,
+			"BottomRotate":180
 		},
 		{
 
@@ -67,7 +71,8 @@
 			"Width":68.9,
 			"Height":84.9,
 			"BottomWidth":63,
-			"BottomHeight":78
+			"BottomHeight":78,
+			"BottomRotate":180
 		},
 		{
 
@@ -80,7 +85,8 @@
 			"Width":91.4,
 			"Height":41.3,
 			"BottomWidth":103,
-			"BottomHeight":46
+			"BottomHeight":46,
+			"BottomRotate":180
 		}
 	]
 }

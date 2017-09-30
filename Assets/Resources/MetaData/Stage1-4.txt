@@ -16,7 +16,8 @@
 			"Width":44.8,
 			"Height":91.1,
 			"BottomWidth":41.6,
-			"BottomHeight":84.5
+			"BottomHeight":84.5,
+			"BottomRotate":180
 		},
 		{
 
@@ -29,7 +30,8 @@
 			"Width":38.35,
 			"Height":177.09,
 			"BottomWidth":15.8,
-			"BottomHeight":73.1
+			"BottomHeight":73.1,
+			"BottomRotate":0
 		},
 		{
 			"SpriteName":"First/4/lolly",
@@ -41,7 +43,8 @@
 			"Width":67.68,
 			"Height":28.91,
 			"BottomWidth":79.9,
-			"BottomHeight":34.1
+			"BottomHeight":34.1,
+			"BottomRotate":0
 		},
 		{
 
@@ -54,7 +57,8 @@
 			"Width":37,
 			"Height":146,
 			"BottomWidth":21,
-			"BottomHeight":83
+			"BottomHeight":83,
+			"BottomRotate":0
 		},
 		{
 
@@ -67,7 +71,8 @@
 			"Width":81.5,
 			"Height":18.76,
 			"BottomWidth":96,
-			"BottomHeight":22
+			"BottomHeight":22,
+			"BottomRotate":0
 		},
 		{
 
@@ -80,7 +85,8 @@
 			"Width":32.5,
 			"Height":29.043,
 			"BottomWidth":41,
-			"BottomHeight":46
+			"BottomHeight":46,
+			"BottomRotate":0
 		},
 		{
 
@@ -93,7 +99,8 @@
 			"Width":31.84,
 			"Height":44.86,
 			"BottomWidth":41,
-			"BottomHeight":46
+			"BottomHeight":46,
+			"BottomRotate":90
 		},
 		{
 
@@ -106,7 +113,8 @@
 			"Width":80.07,
 			"Height":71.09,
 			"BottomWidth":70,
-			"BottomHeight":62
+			"BottomHeight":62,
+			"BottomRotate":180
 		}
 	]
 }
