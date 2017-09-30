@@ -35,6 +35,9 @@ public class HiddenObject : MonoBehaviour {
 
             GameController.Instance.FindHiddenObject();
 
+            GameController.Instance.bottomList[name].transform.GetChild(1).gameObject.SetActive(true);
+            GameController.Instance.bottomList[name].transform.GetChild(2).gameObject.SetActive(false);
+
             Destroy(gameObject, 1f);
             Destroy(circle, 1f);
 

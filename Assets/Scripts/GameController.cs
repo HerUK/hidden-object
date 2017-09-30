@@ -22,6 +22,14 @@ public class GameController : MonoBehaviour {
     public static GameController Instance;
     public float gameStart;
 
+    public Dictionary<string, GameObject> hiddenList;
+    public Dictionary<string, GameObject> bottomList;
+
+    /**
+
+    public Dictionary<string, GameObject> StageList;
+
+    **/
 
     bool ObjctCheck = false;
 
@@ -36,6 +44,10 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Instance = this;
+
+        hiddenList = new Dictionary<string, GameObject>();
+        bottomList = new Dictionary<string, GameObject>();
+
         //StartCoroutine(StartConllectHint());
         DataController.Instance.LoadStageData();
         DataController.Instance.LoadGameData();
@@ -43,6 +55,28 @@ public class GameController : MonoBehaviour {
         InitItemListData();
         gameStart = Time.time;
 
+
+        /**
+        User user = new User();
+        user.FacebookID = "111";
+        user.FacebookName = "Hoyean";
+        user.FacebookPhotoURL = "http:/asdf";
+
+        string body = JsonUtility.ToJson(user);
+
+        HTTPClient.Instance.POST(
+            "http://heruk.azurewebsites.net/Login/Facebook",
+            body,
+            delegate (WWW www) {
+
+                Debug.Log(www.text);
+
+                LoginResult result = JsonUtility.FromJson<LoginResult>(www.text);
+
+                Debug.Log(result.Message);
+
+            });
+        **/
 
         /*
         if (Advertisement.isSupported)
@@ -114,6 +148,7 @@ public class GameController : MonoBehaviour {
 
             rect.sizeDelta = new Vector2(item.Width, item.Height);
 
+            hiddenList.Add(item.Name, obj);
 
         }
         ObjectCount = list.Count;
@@ -124,6 +159,26 @@ public class GameController : MonoBehaviour {
         ObjectCount--;
         if(ObjectCount == 0)
         {
+            string stage_name = DataController.Instance.ChapterNum + "-" + DataController.Instance.StageNum;
+            if (!DataController.Instance.gameData.ClearList.Contains(stage_name))
+            {
+                DataController.Instance.gameData.ClearList.Add(stage_name);
+            }
+
+            DataController.Instance.SaveGameData();
+
+            /**
+
+            object Get = DataController.instance.gameData.ClearList;
+            if(string intance.stage_name == object);
+            {
+                GameController.Instance.StageList.transform.GetChild(0).gameObject.SetActive(true);
+                GameController.Instance.StageList.transform.GetChild(1).gameObject.SetActive(false);
+                GameController.Instance.StageList.transform.GetChild(2).gameObject.SetActive(false);
+            }
+
+            **/
+
             float timePassed = Time.time - gameStart;
             int minutes = Mathf.FloorToInt(timePassed / 60);
             int seconds = Mathf.FloorToInt(timePassed % 60);
@@ -162,6 +217,7 @@ public class GameController : MonoBehaviour {
             rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
             rect.Rotate(new Vector3(0, 0, item.BottomRotate));
 
+            bottomList.Add(item.Name, obj);
             /**  
              if (!ObjctCheck)
              {

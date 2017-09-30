@@ -9,5 +9,6 @@ public class GameData {
     public int Hint = 0;
     public float TimePassed = 0f;
     public string LastHintAt;
+    public List<string> ClearList;
 
 }
