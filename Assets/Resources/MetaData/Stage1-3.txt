@@ -23,8 +23,8 @@
 			"SpriteName":"First/3/pencil",
 			"Name":"pencil",
 
-			"PosX":1003,
-			"PosY":-659.2,
+			"PosX":51,
+			"PosY":40,
 			
 			"Width":30.1,
 			"Height":127.4,
@@ -35,8 +35,8 @@
 			"SpriteName":"First/3/cup",
 			"Name":"cup",
 
-			"PosX":948.5001,
-			"PosY":-1093.609,
+			"PosX":-2.1,
+			"PosY":-393.1,
 			
 			"Width":100.8,
 			"Height":104.58,
@@ -48,8 +48,8 @@
 			"SpriteName":"First/3/triangle",
 			"Name":"triangle",
 
-			"PosX":888.47,
-			"PosY":-331.7,
+			"PosX":-62.2,
+			"PosY":368.1,
 			
 			"Width":67.6,
 			"Height":57.97,
@@ -61,8 +61,8 @@
 			"SpriteName":"First/3/banana",
 			"Name":"banana",
 
-			"PosX":742.41,
-			"PosY":-366.88,
+			"PosX":-209.7,
+			"PosY":334.9,
 			
 			"Width":143.04,
 			"Height":180.97,
@@ -74,8 +74,8 @@
 			"SpriteName":"First/3/socks",
 			"Name":"socks",
 
-			"PosX":785.94,
-			"PosY":-524.94,
+			"PosX":-166.1,
+			"PosY":175.8,
 			
 			"Width":131.45,
 			"Height":117.59,
@@ -87,8 +87,8 @@
 			"SpriteName":"First/3/tack",
 			"Name":"tack",
 
-			"PosX":1316.29,
-			"PosY":-336.71,
+			"PosX":364.7,
+			"PosY":362.9,
 			
 			"Width":29.07,
 			"Height":30.88,

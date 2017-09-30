@@ -10,8 +10,8 @@
 			"SpriteName":"First/7/cap",
 			"Name":"cap",
 
-			"PosX":1110.7,
-			"PosY":-1181,
+			"PosX":156.8599,
+			"PosY":-482.2,
 			
 			"Width":199.5,
 			"Height":118.3,
@@ -23,8 +23,8 @@
 			"SpriteName":"First/7/boat",
 			"Name":"boat",
 
-			"PosX":772.22,
-			"PosY":-625.13,
+			"PosX":-181.6201,
+			"PosY":73.67007,
 			
 			"Width":65.98,
 			"Height":80.04,
@@ -35,8 +35,8 @@
 			"SpriteName":"First/7/brush",
 			"Name":"brush",
 
-			"PosX":594.78,
-			"PosY":-312.53,
+			"PosX":-359.06,
+			"PosY":386.27,
 			
 			"Width":64.19,
 			"Height":122.17,
@@ -48,8 +48,8 @@
 			"SpriteName":"First/7/pizza",
 			"Name":"pizza",
 
-			"PosX":1232.4,
-			"PosY":-194.4,
+			"PosX":278.56,
+			"PosY":504.4,
 			
 			"Width":63.18,
 			"Height":72.11,
@@ -58,11 +58,11 @@
 		},
 		{
 
-			"SpriteName":"First/6/birdie",
+			"SpriteName":"First/7/birdie",
 			"Name":"birdie",
 
-			"PosX":1239.1,
-			"PosY":-436.59,
+			"PosX":285.2599,
+			"PosY":262.2101,
 			
 			"Width":52.345,
 			"Height":67,
@@ -74,8 +74,8 @@
 			"SpriteName":"First/7/banana",
 			"Name":"banana",
 
-			"PosX":789.84,
-			"PosY":-924.8,
+			"PosX":-164,
+			"PosY":-226,
 			
 			"Width":96.74,
 			"Height":66.41,
@@ -87,8 +87,8 @@
 			"SpriteName":"First/7/socks",
 			"Name":"socks",
 
-			"PosX":698.26,
-			"PosY":-492.37,
+			"PosX":-255.58,
+			"PosY":206.4301,
 			
 			"Width":117.92,
 			"Height":58.61,

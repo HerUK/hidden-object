@@ -5,11 +5,11 @@
 		{
 			"PackName":"Basic",
 			
-			"Count":30,
+			"Count":7,
 			"Price":0,
 		},
 		{
-			"PackName":"Story",
+			"PackName":"Charge",
 			
 			"Count":30,
 			"Price":0.99,

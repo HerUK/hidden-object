@@ -10,8 +10,8 @@
 			"SpriteName":"First/6/spoon",
 			"Name":"spoon",
 
-			"PosX":985,
-			"PosY":-932.4,
+			"PosX":32.19994,
+			"PosY":-232.2001,
 			
 			"Width":85.2,
 			"Height":76.5,
@@ -23,8 +23,8 @@
 			"SpriteName":"First/6/opener",
 			"Name":"opener",
 
-			"PosX":662.8,
-			"PosY":-997.2,
+			"PosX":-290,
+			"PosY":-297,
 			
 			"Width":33.6,
 			"Height":70.8,
@@ -35,8 +35,8 @@
 			"SpriteName":"First/6/carrot",
 			"Name":"carrot",
 
-			"PosX":1085.4,
-			"PosY":-1109.7,
+			"PosX":132.6,
+			"PosY":-409.5,
 			
 			"Width":71.8,
 			"Height":144.3,
@@ -48,8 +48,8 @@
 			"SpriteName":"First/6/brush",
 			"Name":"brush",
 
-			"PosX":1302.5,
-			"PosY":-380.7,
+			"PosX":349.7,
+			"PosY":319.4999,
 			
 			"Width":98.3,
 			"Height":46.7,
@@ -61,8 +61,8 @@
 			"SpriteName":"First/6/ship",
 			"Name":"ship",
 
-			"PosX":1287.7,
-			"PosY":-515.4,
+			"PosX":334.8999,
+			"PosY":184.7999,
 			
 			"Width":68.9,
 			"Height":84.9,
@@ -74,8 +74,8 @@
 			"SpriteName":"First/6/cap",
 			"Name":"cap",
 
-			"PosX":638.41,
-			"PosY":-508.41,
+			"PosX":-355.3,
+			"PosY":-156,
 			
 			"Width":91.4,
 			"Height":41.3,

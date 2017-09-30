@@ -10,8 +10,8 @@
 			"SpriteName":"First/5/tack",
 			"Name":"tack",
 
-			"PosX":1168.8,
-			"PosY":-1033.22,
+			"PosX":217,
+			"PosY":-334,
 			
 			"Width":41.453,
 			"Height":36.74,
@@ -23,8 +23,8 @@
 			"SpriteName":"First/5/pencil",
 			"Name":"pencil",
 
-			"PosX":1236.9,
-			"PosY":-1095,
+			"PosX":286.2001,
+			"PosY":-393.71,
 			
 			"Width":61.478,
 			"Height":139.1,
@@ -35,8 +35,8 @@
 			"SpriteName":"First/5/umbrella",
 			"Name":"umbrella",
 
-			"PosX":714,
-			"PosY":-1146.3,
+			"PosX":-236.6999,
+			"PosY":-445.0101,
 			
 			"Width":87.5,
 			"Height":241.6,
@@ -48,8 +48,8 @@
 			"SpriteName":"First/5/whistle",
 			"Name":"whistle",
 
-			"PosX":1042.7,
-			"PosY":-636.29,
+			"PosX":92,
+			"PosY":65,
 			
 			"Width":44.76,
 			"Height":78.87,
@@ -61,8 +61,8 @@
 			"SpriteName":"First/5/gloves",
 			"Name":"gloves",
 
-			"PosX":699.45,
-			"PosY":-333.46,
+			"PosX":-251.2499,
+			"PosY":367.83,
 			
 			"Width":65.78,
 			"Height":87.23,
@@ -74,8 +74,8 @@
 			"SpriteName":"First/5/cake",
 			"Name":"cake",
 
-			"PosX":638.41,
-			"PosY":-508.41,
+			"PosX":-312.29,
+			"PosY":192.88,
 			
 			"Width":50.8,
 			"Height":75.84,

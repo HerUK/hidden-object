@@ -10,8 +10,8 @@
 			"SpriteName":"First/4/bottle",
 			"Name":"bottle",
 
-			"PosX":826,
-			"PosY":-1106.6,
+			"PosX":-125.8,
+			"PosY":-406,
 			
 			"Width":44.8,
 			"Height":91.1,
@@ -23,8 +23,8 @@
 			"SpriteName":"First/4/comb",
 			"Name":"comb",
 
-			"PosX":1235.75,
-			"PosY":-647.56,
+			"PosX":285.3101,
+			"PosY":52.50983,
 			
 			"Width":38.35,
 			"Height":177.09,
@@ -35,8 +35,8 @@
 			"SpriteName":"First/4/lolly",
 			"Name":"lolly",
 
-			"PosX":1309.08,
-			"PosY":-428.95,
+			"PosX":358.64,
+			"PosY":271.1199,
 			
 			"Width":67.68,
 			"Height":28.91,
@@ -48,11 +48,11 @@
 			"SpriteName":"First/4/needle",
 			"Name":"needle",
 
-			"PosX":690.84,
-			"PosY":-908.41,
+			"PosX":-260,
+			"PosY":-210,
 			
-			"Width":97.83,
-			"Height":149.89,
+			"Width":37,
+			"Height":146,
 			"BottomWidth":21,
 			"BottomHeight":83
 		},
@@ -61,7 +61,7 @@
 			"SpriteName":"First/4/pin",
 			"Name":"pin",
 
-			"PosX":1063.26,
+			"PosX":112.8201,
 			"PosY":-1201.17,
 			
 			"Width":81.5,
