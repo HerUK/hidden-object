@@ -1,0 +1,19 @@
+﻿{
+
+	"PackList":
+	[
+		{
+			"PackName":"Basic",
+			
+			"Count":30,
+			"Price":0,
+		},
+		{
+			"PackName":"Story",
+			
+			"Count":30,
+			"Price":0.99,
+		}
+		
+	]
+}

@@ -15,6 +15,7 @@ public class Item  {
     public float Height;
     public float BottomWidth;
     public float BottomHeight;
+    public float BottomRotate;
 
     /**
     public float Color;

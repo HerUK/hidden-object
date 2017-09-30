@@ -23,6 +23,16 @@ public class GameController : MonoBehaviour {
     public float gameStart;
 
 
+    bool ObjctCheck = false;
+
+#if UNITY_IOS
+    private string gameId = "1553201";
+#elif UNITY_ANDROID
+    private string gameId = "1553200";
+#endif
+
+
+
     // Use this for initialization
     void Start () {
         Instance = this;
@@ -33,8 +43,16 @@ public class GameController : MonoBehaviour {
         InitItemListData();
         gameStart = Time.time;
 
+
+        /*
+        if (Advertisement.isSupported)
+        {
+            Advertisement.Initialize(gameId);
+        }
+        */
+
     }
-	
+
 
     // Update is called once per frame
     void Update()
@@ -138,21 +156,63 @@ public class GameController : MonoBehaviour {
             pos.y = 70f;
             rect.anchoredPosition = pos;
             i++;
-            //obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName);
 
             obj.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName); ;
             rect = obj.transform.GetChild(0).GetComponent<RectTransform>();
             rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
-            //rect.Rotate(new Vector3(0, 0, 90f));
+            rect.Rotate(new Vector3(0, 0, item.BottomRotate));
 
-            /**
-            rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
-            rect.Rotation = new Vector2(item.Rotation);
-            **/
+            /**  
+             if (!ObjctCheck)
+             {
+                 ObjctCheck = true;
+                 Debug.Log("Check!");
+                 Destroy(gameObject.Text, 1f);
+                 GameObject prefab = Resources.Load("Prefabs/BottomObject.img") as GameObject;
+                 GameObject obj = Instantiate(prefab, bottomContent);
+                 obj.name = check;
+                 obj.GetComponentInChildren<Image>().img = check;
+                 img.sprite = Resources.Load<Sprite>("Sprites/Find");
+
+                 GameController.Instance.FindHiddenObject();
+
+             }
+             **/
 
 
         }
     }
+
+        /**
+        void ShowRewardedVideo()
+        {
+            var options = new ShowOptions();
+            options.resultCallback = HandleShowResult;
+
+            Advertisement.Show("rewardedVideo", options);
+        }
+
+        void HandleShowResult(ShowResult result)
+        {
+            if (result == ShowResult.Finished)
+            {
+                Debug.Log("Video completed - Offer a reward to the player");
+                DataController.Instance.gameData.Hint += 1;
+                DataController.Instance.SaveGameData();
+
+            }
+            else if (result == ShowResult.Skipped)
+            {
+                Debug.LogWarning("Video was skipped - Do NOT reward the player");
+
+            }
+            else if (result == ShowResult.Failed)
+            {
+                Debug.LogError("Video failed to show");
+            }
+        }
+        **/
+
 
     public void PurchaseComplete(Product p)
     {

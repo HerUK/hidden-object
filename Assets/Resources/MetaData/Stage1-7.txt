@@ -1,0 +1,100 @@
+﻿{
+	"BgImg":"First/7/bg",
+
+	"Width":802,
+	"Height":1138,
+
+	"ItemList":
+	[
+		{
+			"SpriteName":"First/7/cap",
+			"Name":"cap",
+
+			"PosX":1110.7,
+			"PosY":-1181,
+			
+			"Width":199.5,
+			"Height":118.3,
+			"BottomWidth":117,
+			"BottomHeight":69
+		},
+		{
+
+			"SpriteName":"First/7/boat",
+			"Name":"boat",
+
+			"PosX":772.22,
+			"PosY":-625.13,
+			
+			"Width":65.98,
+			"Height":80.04,
+			"BottomWidth":62,
+			"BottomHeight":75
+		},
+		{
+			"SpriteName":"First/7/brush",
+			"Name":"brush",
+
+			"PosX":594.78,
+			"PosY":-312.53,
+			
+			"Width":64.19,
+			"Height":122.17,
+			"BottomWidth":48,
+			"BottomHeight":92
+		},
+		{
+
+			"SpriteName":"First/7/pizza",
+			"Name":"pizza",
+
+			"PosX":1232.4,
+			"PosY":-194.4,
+			
+			"Width":63.18,
+			"Height":72.11,
+			"BottomWidth":70,
+			"BottomHeight":80
+		},
+		{
+
+			"SpriteName":"First/6/birdie",
+			"Name":"birdie",
+
+			"PosX":1239.1,
+			"PosY":-436.59,
+			
+			"Width":52.345,
+			"Height":67,
+			"BottomWidth":55,
+			"BottomHeight":70
+		},
+		{
+
+			"SpriteName":"First/7/banana",
+			"Name":"banana",
+
+			"PosX":789.84,
+			"PosY":-924.8,
+			
+			"Width":96.74,
+			"Height":66.41,
+			"BottomWidth":107,
+			"BottomHeight":73
+		},
+		{
+
+			"SpriteName":"First/7/socks",
+			"Name":"socks",
+
+			"PosX":698.26,
+			"PosY":-492.37,
+			
+			"Width":117.92,
+			"Height":58.61,
+			"BottomWidth":119,
+			"BottomHeight":59
+		}
+	]
+}
+

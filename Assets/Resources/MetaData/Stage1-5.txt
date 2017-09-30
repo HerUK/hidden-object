@@ -1,0 +1,87 @@
+﻿{
+	"BgImg":"First/5/bg",
+
+	"Width":802,
+	"Height":1138,
+
+	"ItemList":
+	[
+		{
+			"SpriteName":"First/5/tack",
+			"Name":"tack",
+
+			"PosX":1168.8,
+			"PosY":-1033.22,
+			
+			"Width":41.453,
+			"Height":36.74,
+			"BottomWidth":41,
+			"BottomHeight":36
+		},
+		{
+
+			"SpriteName":"First/5/pencil",
+			"Name":"pencil",
+
+			"PosX":1236.9,
+			"PosY":-1095,
+			
+			"Width":61.478,
+			"Height":139.1,
+			"BottomWidth":40,
+			"BottomHeight":90
+		},
+		{
+			"SpriteName":"First/5/umbrella",
+			"Name":"umbrella",
+
+			"PosX":714,
+			"PosY":-1146.3,
+			
+			"Width":87.5,
+			"Height":241.6,
+			"BottomWidth":29.4,
+			"BottomHeight":81.157
+		},
+		{
+
+			"SpriteName":"First/5/whistle",
+			"Name":"whistle",
+
+			"PosX":1042.7,
+			"PosY":-636.29,
+			
+			"Width":44.76,
+			"Height":78.87,
+			"BottomWidth":37.8,
+			"BottomHeight":66.6
+		},
+		{
+
+			"SpriteName":"First/5/gloves",
+			"Name":"gloves",
+
+			"PosX":699.45,
+			"PosY":-333.46,
+			
+			"Width":65.78,
+			"Height":87.23,
+			"BottomWidth":52.4,
+			"BottomHeight":69.5
+		},
+		{
+
+			"SpriteName":"First/5/cake",
+			"Name":"cake",
+
+			"PosX":638.41,
+			"PosY":-508.41,
+			
+			"Width":50.8,
+			"Height":75.84,
+			"BottomWidth":51,
+			"BottomHeight":76.2
+		}
+	]
+}
+

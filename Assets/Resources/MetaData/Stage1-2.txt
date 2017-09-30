@@ -1,100 +1,99 @@
 ﻿{
-	"BgImg":"First/2/image",
+	"BgImg":"First/2/bg",
 
-	"Width":900,
-	"Height":1440,
+	"Width":802,
+	"Height":1138,
 
 	"ItemList":
 	[
 		{
-			"SpriteName":"First/2/ax",
-			"Name":"Ax",
+			"SpriteName":"First/2/boat",
+			"Name":"boat",
 
-			"PosX":-21.28802,
-			"PosY":77.20001,
+			"PosX":317,
+			"PosY":-268,
 			
-			"Width":42,
-			"Height":95.1
+			"Width":81.06,
+			"Height":54.3,
+			"BottomWidth":96,
+			"BottomHeight":67
 		},
 		{
 
-			"SpriteName":"First/2/gloves",
-			"Name":"Brush",
+			"SpriteName":"First/2/brush",
+			"Name":"brush",
 
-			"PosX":568.8,
-			"PosY":-54.20001,
+			"PosX":105,
+			"PosY":-88,
 			
-			"Width":75.1,
-			"Height":33.3
+			"Width":35.12,
+			"Height":117.71,
+			"BottomWidth":22,
+			"BottomHeight":80
 		},
 		{
-			"SpriteName":"First/2/ice-cream",
-			"Name":"IceCream",
+			"SpriteName":"First/2/cake",
+			"Name":"cake",
 
-			"PosX":-731.2101,
-			"PosY":-409.9863,
+			"PosX":214,
+			"PosY":299,
 			
-			"Width":37.6,
-			"Height":70.9
+			"Width":55.83,
+			"Height":73.59,
+			"BottomWidth":51,
+			"BottomHeight":69
 		},
 		{
 
-			"SpriteName":"First/2/ruler",
-			"Name":"Ruler",
+			"SpriteName":"First/2/carrot",
+			"Name":"carrot",
 
-			"PosX":107.7,
-			"PosY":-86.20001,
+			"PosX":-195,
+			"PosY":286,
 			
-			"Width":37.3,
-			"Height":55.2
+			"Width":70.68,
+			"Height":139.11,
+			"BottomWidth":44,
+			"BottomHeight":92
+		},
+		{
+
+			"SpriteName":"First/2/fish",
+			"Name":"fish",
+
+			"PosX":57,
+			"PosY":-232,
+			
+			"Width":95.02,
+			"Height":214.58,
+			"BottomWidth":40,
+			"BottomHeight":92
+		},
+		{
+
+			"SpriteName":"First/2/mail",
+			"Name":"mail",
+
+			"PosX":-166.2,
+			"PosY":-369.4,
+			
+			"Width":81.72,
+			"Height":48.01,
+			"BottomWidth":82,
+			"BottomHeight":54
 		},
 		{
 
 			"SpriteName":"First/2/needle",
-			"Name":"Needle",
+			"Name":"needle",
 
-			"PosX":-366.4101,
-			"PosY":-155.0864,
+			"PosX":-373,
+			"PosY":186,
 			
-			"Width":26.3,
-			"Height":146.5
-
-		},
-		{
-
-			"SpriteName":"First/2/pencil",
-			"Name":"Pencel",
-
-			"PosX":-333.3101,
-			"PosY":132.3137,
-			
-			"Width":20.7,
-			"Height":71
-
-		},
-		{
-
-			"SpriteName":"1First/2pizza",
-			"Name":"Pizza",
-
-			"PosX":293.8,
-			"PosY":-160,
-			
-			"Width":83,
-			"Height":109
-
-		},
-		{
-
-			"SpriteName":"First/2/acorn",
-			"Name":"Acorn",
-
-			"PosX":132.33,
-			"PosY":171.3,
-			
-			"Width":23.46,
-			"Height":48.4
-
+			"Width":52.48,
+			"Height":175.75,
+			"BottomWidth":21,
+			"BottomHeight":74
 		}
 	]
 }

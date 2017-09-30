@@ -16,9 +16,13 @@ public class btn_main : MonoBehaviour {
     {
         SceneManager.LoadScene("game");
     }
-    public void Goto_Shop()
+    public void Start_Basic()
     {
-        SceneManager.LoadScene("shop");
+        SceneManager.LoadScene("basic");
+    }
+    public void Goto_set()
+    {
+        SceneManager.LoadScene("set");
     }
     public void Goto_Main()
     {

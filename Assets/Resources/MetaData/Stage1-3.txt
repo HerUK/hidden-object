@@ -1,0 +1,99 @@
+﻿{
+	"BgImg":"First/3/bg",
+
+	"Width":802,
+	"Height":1138,
+
+	"ItemList":
+	[
+		{
+			"SpriteName":"First/3/brush",
+			"Name":"brush",
+
+			"PosX":-15,
+			"PosY":-479,
+			
+			"Width":124,
+			"Height":55.7,
+			"BottomWidth":99,
+			"BottomHeight":44
+		},
+		{
+
+			"SpriteName":"First/3/pencil",
+			"Name":"pencil",
+
+			"PosX":1003,
+			"PosY":-659.2,
+			
+			"Width":30.1,
+			"Height":127.4,
+			"BottomWidth":17,
+			"BottomHeight":78
+		},
+		{
+			"SpriteName":"First/3/cup",
+			"Name":"cup",
+
+			"PosX":948.5001,
+			"PosY":-1093.609,
+			
+			"Width":100.8,
+			"Height":104.58,
+			"BottomWidth":63,
+			"BottomHeight":68
+		},
+		{
+
+			"SpriteName":"First/3/triangle",
+			"Name":"triangle",
+
+			"PosX":888.47,
+			"PosY":-331.7,
+			
+			"Width":67.6,
+			"Height":57.97,
+			"BottomWidth":77,
+			"BottomHeight":71
+		},
+		{
+
+			"SpriteName":"First/3/banana",
+			"Name":"banana",
+
+			"PosX":742.41,
+			"PosY":-366.88,
+			
+			"Width":143.04,
+			"Height":180.97,
+			"BottomWidth":63,
+			"BottomHeight":84.3
+		},
+		{
+
+			"SpriteName":"First/3/socks",
+			"Name":"socks",
+
+			"PosX":785.94,
+			"PosY":-524.94,
+			
+			"Width":131.45,
+			"Height":117.59,
+			"BottomWidth":80,
+			"BottomHeight":74
+		},
+		{
+
+			"SpriteName":"First/3/tack",
+			"Name":"tack",
+
+			"PosX":1316.29,
+			"PosY":-336.71,
+			
+			"Width":29.07,
+			"Height":30.88,
+			"BottomWidth":38,
+			"BottomHeight":47
+		}
+	]
+}
