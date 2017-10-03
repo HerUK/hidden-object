@@ -51,8 +51,8 @@
 			"SpriteName":"First/4/needle",
 			"Name":"needle",
 
-			"PosX":-260,
-			"PosY":-210,
+			"PosX":-260.2,
+			"PosY":-211,
 			
 			"Width":37,
 			"Height":146,
@@ -65,8 +65,8 @@
 			"SpriteName":"First/4/pin",
 			"Name":"pin",
 
-			"PosX":112.8201,
-			"PosY":-1201.17,
+			"PosX":112,
+			"PosY":-500.27,
 			
 			"Width":81.5,
 			"Height":18.76,
@@ -79,8 +79,8 @@
 			"SpriteName":"First/4/socks",
 			"Name":"socks",
 
-			"PosX":1226.64,
-			"PosY":-851.9,
+			"PosX":275,
+			"PosY":-151,
 			
 			"Width":32.5,
 			"Height":29.043,
@@ -93,8 +93,8 @@
 			"SpriteName":"First/4/tack",
 			"Name":"tack",
 
-			"PosX":1043.44,
-			"PosY":-1060.07,
+			"PosX":91.79993,
+			"PosY":-359.17,
 			
 			"Width":31.84,
 			"Height":44.86,
@@ -107,8 +107,8 @@
 			"SpriteName":"First/4/triangle",
 			"Name":"triangle",
 
-			"PosX":952.54,
-			"PosY":-922.33,
+			"PosX":0.9001114,
+			"PosY":-221.4301,
 			
 			"Width":80.07,
 			"Height":71.09,
