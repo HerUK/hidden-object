@@ -1,0 +1,14 @@
+﻿{
+	"ShopItemList
+	[
+		{
+			"Type":"CollectHint",
+			"Name":"광고 보고 힌트 한개",
+			"PurchaseType";"RewardedVideo",
+			"Cost":1,
+			"RewardType":"Gold",
+			"RewardAmount":1
+		}
+	]
+}
+

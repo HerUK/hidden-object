@@ -14,6 +14,23 @@ public class HiddenObject : MonoBehaviour {
             IsFound = true;
             Debug.Log("Find it!");
             GameObject circle = new GameObject();
+            /**
+            if (Input.GameObject(0))
+           {
+            //Debug.Log(Input.mousePosition);
+           
+            Ray ray = MainCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100f))
+            {
+                //Debug.Log(hit.point);
+                Debug.DrawLine(ray.origin, hit.point, Color.red);
+                Instantiate(EffectSmoke, hit.point, EffectSmoke.transform.rotation);
+                MainCamera.gameObject.GetComponent<AudioSource>().PlayOneShot(SFXClick);
+            }
+
+             }
+            **/
             RectTransform rt = circle.AddComponent<RectTransform>();
             Image img = circle.AddComponent<Image>();
             circle.name = "Found";
@@ -29,9 +46,9 @@ public class HiddenObject : MonoBehaviour {
             pos.y = GetComponent<RectTransform>().anchoredPosition.y;
             rt.anchoredPosition = pos;
 
-            rt.sizeDelta = new Vector2(150f, 150f);
+            rt.sizeDelta = new Vector2(100f, 100f);
 
-            GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
 
             GameController.Instance.FindHiddenObject();
 
@@ -39,7 +56,6 @@ public class HiddenObject : MonoBehaviour {
             GameController.Instance.bottomList[name].transform.GetChild(2).gameObject.SetActive(false);
 
             Destroy(gameObject, 1f);
-            Destroy(circle, 1f);
 
         }
 

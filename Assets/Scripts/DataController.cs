@@ -34,8 +34,7 @@ public class DataController : MonoBehaviour {
     }
     // Singleton class end
 
-    public int ChapterNum = 1;
-    public int StageNum = 1;
+    public string StageID = "1-1";
 
     public string ItemListNum;
 
@@ -56,6 +55,20 @@ public class DataController : MonoBehaviour {
         }
     }
 
+    MetaData _metaData;
+    public MetaData metaData
+    {
+        get
+        {
+            if(_metaData == null)
+            {
+                LoadMetaData();
+            }
+            return _metaData;
+
+        }
+    }
+
     StageData _stageData;
     public StageData stageData
     {
@@ -68,11 +81,51 @@ public class DataController : MonoBehaviour {
             return _stageData;
         }
     }
-    
+
+    public void LoadMetaData()
+    {
+        TextAsset json = Resources.Load("MetaData/MetaData") as TextAsset;
+        Debug.Log(json.text);
+        _metaData = JsonUtility.FromJson<MetaData>(json.text);
+
+        foreach (Pack item in _metaData.PackList)
+        {
+            Debug.Log(item.PackName);
+        }
+    }
+
+    /**
+     public void Init"PackList()
+    {
+        int i = 0;
+        List<Item> list = DataController.Instance.MetaData.PackList;
+        foreach (Item item in list)
+        {
+            Debug.Log(Pack.Name);
+            GameObject prefab = Resources.Load("Prefabs/StageObject") as GameObject;
+            GameObject obj = Instantiate(prefab, StageContent);
+            obj.name = stageNum.Name;
+
+            obj.GetComponentInChildren<Text>().text = stageNum.Name;
+            var rect = obj.GetComponent<RectTransform>();
+
+            Vector2 pos = rect.anchoredPosition;
+            pos.x = -435f + 125f*i;
+            pos.y = 70f;
+            rect.anchoredPosition = pos;
+            i++;
+
+            obj.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName); ;
+            rect = obj.transform.GetChild(0).GetComponent<RectTransform>();
+            rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
+    rect.Rotate(new Vector3(0, 0, item.BottomRotate));
+
+            bottomList.Add(item.Name, obj);
+     **/
 
     public void LoadStageData()
     {
-        TextAsset json = Resources.Load("MetaData/Stage"+ ChapterNum + "-" + StageNum) as TextAsset;
+        TextAsset json = Resources.Load("MetaData/Stage"+ StageID) as TextAsset;
         Debug.Log(json.text);
         _stageData = JsonUtility.FromJson<StageData>(json.text);
 

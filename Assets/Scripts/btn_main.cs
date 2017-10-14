@@ -8,8 +8,13 @@ public class btn_main : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        Init();
 	}
+
+    void Init()
+    {
+        DataController.Instance.LoadMetaData();
+    }
 
     // Update is called once per frame
     public void Start_Game()

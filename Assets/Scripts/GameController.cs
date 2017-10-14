@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Advertisements;
 using UnityEngine.Purchasing;
 using UnityEngine.UI;
 
@@ -78,13 +79,11 @@ public class GameController : MonoBehaviour {
             });
         **/
 
-        /*
+
         if (Advertisement.isSupported)
         {
-            Advertisement.Initialize(gameId);
+            Advertisement.Initialize(gameId, true);
         }
-        */
-
     }
 
 
@@ -159,7 +158,7 @@ public class GameController : MonoBehaviour {
         ObjectCount--;
         if(ObjectCount == 0)
         {
-            string stage_name = DataController.Instance.ChapterNum + "-" + DataController.Instance.StageNum;
+			string stage_name = DataController.Instance.StageID;
             if (!DataController.Instance.gameData.ClearList.Contains(stage_name))
             {
                 DataController.Instance.gameData.ClearList.Add(stage_name);
@@ -168,9 +167,8 @@ public class GameController : MonoBehaviour {
             DataController.Instance.SaveGameData();
 
             /**
-
-            object Get = DataController.instance.gameData.ClearList;
-            if(string intance.stage_name == object);
+            List<ClearList> list = DataController.Instance.gameData.ClearList.;
+            if(string intance.stage_name == ClearList);
             {
                 GameController.Instance.StageList.transform.GetChild(0).gameObject.SetActive(true);
                 GameController.Instance.StageList.transform.GetChild(1).gameObject.SetActive(false);
@@ -184,8 +182,7 @@ public class GameController : MonoBehaviour {
             int seconds = Mathf.FloorToInt(timePassed % 60);
             string msg = string.Format("당신 기록 : {0}분 {1}초", minutes, seconds);
             DialogDataAlert alert = new DialogDataAlert("전체 찾았습니다!", msg, delegate () {
-                DataController.Instance.StageNum++;
-                Application.LoadLevel("game");
+                Application.LoadLevel("basic");
             });
             DialogManager.Instance.Push(alert);
         }
@@ -239,7 +236,7 @@ public class GameController : MonoBehaviour {
         }
     }
 
-        /**
+
         void ShowRewardedVideo()
         {
             var options = new ShowOptions();
@@ -267,7 +264,7 @@ public class GameController : MonoBehaviour {
                 Debug.LogError("Video failed to show");
             }
         }
-        **/
+
 
 
     public void PurchaseComplete(Product p)
