@@ -1,0 +1,93 @@
+﻿{
+	"BgImg":"First/6/bg",
+
+	"Width":802,
+	"Height":1138,
+
+	"ItemList":
+	[
+		{
+			"SpriteName":"First/6/spoon",
+			"Name":"spoon",
+
+			"PosX":32.19994,
+			"PosY":-232.2001,
+			
+			"Width":85.2,
+			"Height":76.5,
+			"BottomWidth":70,
+			"BottomHeight":62,
+			"BottomRotate":0
+		},
+		{
+
+			"SpriteName":"First/6/opener",
+			"Name":"opener",
+
+			"PosX":-290,
+			"PosY":-297,
+			
+			"Width":33.6,
+			"Height":70.8,
+			"BottomWidth":33,
+			"BottomHeight":70,
+			"BottomRotate":0
+		},
+		{
+			"SpriteName":"First/6/carrot",
+			"Name":"carrot",
+
+			"PosX":132.6,
+			"PosY":-409.5,
+			
+			"Width":71.8,
+			"Height":144.3,
+			"BottomWidth":43,
+			"BottomHeight":88,
+			"BottomRotate":0
+		},
+		{
+
+			"SpriteName":"First/6/brush",
+			"Name":"brush",
+
+			"PosX":349.7,
+			"PosY":319.4999,
+			
+			"Width":98.3,
+			"Height":46.7,
+			"BottomWidth":75,
+			"BottomHeight":35,
+			"BottomRotate":180
+		},
+		{
+
+			"SpriteName":"First/6/ship",
+			"Name":"ship",
+
+			"PosX":334.8999,
+			"PosY":184.7999,
+			
+			"Width":68.9,
+			"Height":84.9,
+			"BottomWidth":63,
+			"BottomHeight":78,
+			"BottomRotate":180
+		},
+		{
+
+			"SpriteName":"First/6/cap",
+			"Name":"cap",
+
+			"PosX":-355.3,
+			"PosY":-156,
+			
+			"Width":91.4,
+			"Height":41.3,
+			"BottomWidth":103,
+			"BottomHeight":46,
+			"BottomRotate":180
+		}
+	]
+}
+

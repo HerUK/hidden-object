@@ -1,0 +1,106 @@
+﻿{
+	"BgImg":"First/2/bg",
+
+	"Width":802,
+	"Height":1138,
+
+	"ItemList":
+	[
+		{
+			"SpriteName":"First/2/boat",
+			"Name":"boat",
+
+			"PosX":317,
+			"PosY":-268,
+			
+			"Width":81.06,
+			"Height":54.3,
+			"BottomWidth":96,
+			"BottomHeight":67,
+			"BottomRotate":0
+		},
+		{
+
+			"SpriteName":"First/2/brush",
+			"Name":"brush",
+
+			"PosX":105,
+			"PosY":-88,
+			
+			"Width":35.12,
+			"Height":117.71,
+			"BottomWidth":22,
+			"BottomHeight":80,
+			"BottomRotate":45
+		},
+		{
+			"SpriteName":"First/2/cake",
+			"Name":"cake",
+
+			"PosX":214,
+			"PosY":299,
+			
+			"Width":55.83,
+			"Height":73.59,
+			"BottomWidth":51,
+			"BottomHeight":69,
+			"BottomRotate":-90
+		},
+		{
+
+			"SpriteName":"First/2/carrot",
+			"Name":"carrot",
+
+			"PosX":-195,
+			"PosY":286,
+			
+			"Width":70.68,
+			"Height":139.11,
+			"BottomWidth":44,
+			"BottomHeight":92,
+			"BottomRotate":0
+		},
+		{
+
+			"SpriteName":"First/2/fish",
+			"Name":"fish",
+
+			"PosX":57,
+			"PosY":-232,
+			
+			"Width":95.02,
+			"Height":214.58,
+			"BottomWidth":40,
+			"BottomHeight":92,
+			"BottomRotate":-90
+		},
+		{
+
+			"SpriteName":"First/2/mail",
+			"Name":"mail",
+
+			"PosX":-166.2,
+			"PosY":-369.4,
+			
+			"Width":81.72,
+			"Height":48.01,
+			"BottomWidth":82,
+			"BottomHeight":54,
+			"BottomRotate":180
+		},
+		{
+
+			"SpriteName":"First/2/needle",
+			"Name":"needle",
+
+			"PosX":-373,
+			"PosY":186,
+			
+			"Width":52.48,
+			"Height":175.75,
+			"BottomWidth":21,
+			"BottomHeight":74,
+			"BottomRotate":0
+		}
+	]
+}

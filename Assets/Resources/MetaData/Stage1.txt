@@ -1,0 +1,124 @@
+﻿{
+	"BgImg":"First/1/bg",
+
+	"Width":1501,
+	"Height":1501,
+
+	"ItemList":
+	[
+		{
+			"SpriteName":"First/1/ax",
+			"Name":"Ax",
+
+			"PosX":-21.28802,
+			"PosY":77.20001,
+			
+			"Width":42,
+			"Height":95.1,
+			"BottomWidth":42,
+			"BottomHeight":95.1,
+			"BottomRotate":0
+		},
+		{
+
+			"SpriteName":"First/1/brush",
+			"Name":"Brush",
+
+			"PosX":568.8,
+			"PosY":-54.20001,
+			
+			"Width":75.1,
+			"Height":33.3,
+			"BottomWidth":75,
+			"BottomHeight":33,
+			"BottomRotate":0
+		},
+		{
+			"SpriteName":"First/1/ice-cream",
+			"Name":"IceCream",
+
+			"PosX":-731.2101,
+			"PosY":-409.9863,
+			
+			"Width":37.6,
+			"Height":70.9,
+			"BottomWidth":37,
+			"BottomHeight":70,
+			"BottomRotate":0
+		},
+		{
+
+			"SpriteName":"First/1/ruler",
+			"Name":"Ruler",
+
+			"PosX":107.7,
+			"PosY":-86.20001,
+			
+			"Width":37.3,
+			"Height":55.2,
+			"BottomWidth":37,
+			"BottomHeight":55,
+			"BottomRotate":180
+		},
+		{
+
+			"SpriteName":"First/1/needle",
+			"Name":"Needle",
+
+			"PosX":-366.4101,
+			"PosY":-155.0864,
+			
+			"Width":26.3,
+			"Height":146.5,
+			"BottomWidth":13,
+			"BottomHeight":73.1,
+			"BottomRotate":45
+
+		},
+		{
+
+			"SpriteName":"First/1/pencil",
+			"Name":"Pencel",
+
+			"PosX":-333.3101,
+			"PosY":132.3137,
+			
+			"Width":20.7,
+			"Height":71,
+			"BottomWidth":20,
+			"BottomHeight":71,
+			"BottomRotate":0
+
+		},
+		{
+
+			"SpriteName":"First/1/pizza",
+			"Name":"Pizza",
+
+			"PosX":293.8,
+			"PosY":-107,
+			
+			"Width":83,
+			"Height":109,
+			"BottomWidth":41,
+			"BottomHeight":54,
+			"BottomRotate":180
+
+		},
+		{
+
+			"SpriteName":"First/1/acorn",
+			"Name":"Acorn",
+
+			"PosX":132.33,
+			"PosY":171.3,
+			
+			"Width":23.46,
+			"Height":48.4,
+			"BottomWidth":23,
+			"BottomHeight":48,
+			"BottomRotate":0
+
+		}
+	]
+}

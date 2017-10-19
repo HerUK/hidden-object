@@ -182,7 +182,7 @@ public class GameController : MonoBehaviour {
             int seconds = Mathf.FloorToInt(timePassed % 60);
             string msg = string.Format("당신 기록 : {0}분 {1}초", minutes, seconds);
             DialogDataAlert alert = new DialogDataAlert("전체 찾았습니다!", msg, delegate () {
-                Application.LoadLevel("basic");
+                Application.LoadLevel("game");
             });
             DialogManager.Instance.Push(alert);
         }

@@ -94,37 +94,11 @@ public class DataController : MonoBehaviour {
         }
     }
 
-    /**
-     public void Init"PackList()
-    {
-        int i = 0;
-        List<Item> list = DataController.Instance.MetaData.PackList;
-        foreach (Item item in list)
-        {
-            Debug.Log(Pack.Name);
-            GameObject prefab = Resources.Load("Prefabs/StageObject") as GameObject;
-            GameObject obj = Instantiate(prefab, StageContent);
-            obj.name = stageNum.Name;
-
-            obj.GetComponentInChildren<Text>().text = stageNum.Name;
-            var rect = obj.GetComponent<RectTransform>();
-
-            Vector2 pos = rect.anchoredPosition;
-            pos.x = -435f + 125f*i;
-            pos.y = 70f;
-            rect.anchoredPosition = pos;
-            i++;
-
-            obj.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/" + item.SpriteName); ;
-            rect = obj.transform.GetChild(0).GetComponent<RectTransform>();
-            rect.sizeDelta = new Vector2(item.BottomWidth, item.BottomHeight);
-    rect.Rotate(new Vector3(0, 0, item.BottomRotate));
-
-            bottomList.Add(item.Name, obj);
-     **/
+   
 
     public void LoadStageData()
     {
+		Debug.Log ("MetaData/Stage" + StageID);
         TextAsset json = Resources.Load("MetaData/Stage"+ StageID) as TextAsset;
         Debug.Log(json.text);
         _stageData = JsonUtility.FromJson<StageData>(json.text);
@@ -137,32 +111,6 @@ public class DataController : MonoBehaviour {
     }
 
 
-    ItemListData _itemListData;
-    public ItemListData itemListData
-    {
-        get
-        {
-            if (_itemListData == null)
-            {
-                LoadItemListData();
-            }
-            return _itemListData;
-        }
-    }
-
-
-    public void LoadItemListData()
-    {
-        TextAsset json = Resources.Load("MetaData/Item"+ItemListNum) as TextAsset;
-        Debug.Log(json.text);
-        _itemListData = JsonUtility.FromJson<ItemListData>(json.text);
-
-        foreach (Item item in _itemListData.ItemList)
-        {
-            Debug.Log(item.Name);
-        }
-
-    }
 
 
     public void LoadGameData()
