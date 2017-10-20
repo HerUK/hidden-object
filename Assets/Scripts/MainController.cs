@@ -22,7 +22,7 @@ public class MainController : MonoBehaviour {
         {
             Debug.Log(pack.PackName);
             if(CurrentPackName == pack.PackName)
-            {
+			{
                 LoadPackItemList(pack);
             }
         }

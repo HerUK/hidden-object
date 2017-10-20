@@ -199,7 +199,6 @@ public class GameController : MonoBehaviour {
             GameObject prefab = Resources.Load("Prefabs/BottomObject") as GameObject;
             GameObject obj = Instantiate(prefab, bottomContent);
             obj.name = item.Name;
-            /*obj.text = item.Name;*/
             obj.GetComponentInChildren<Text>().text = item.Name;
             var rect = obj.GetComponent<RectTransform>();
 
