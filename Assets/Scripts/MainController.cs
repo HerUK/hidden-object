@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MainController : MonoBehaviour {
     public Transform Content;
-    public string CurrentPackName = "Basic";
 
     // Use this for initialization
     void Start()
@@ -21,7 +20,8 @@ public class MainController : MonoBehaviour {
         foreach (Pack pack in metaData.PackList)
         {
             Debug.Log(pack.PackName);
-            if(CurrentPackName == pack.PackName)
+			if(DataController.Instance.gameData.CurrentPackName == pack.PackName)
+
 			{
                 LoadPackItemList(pack);
             }

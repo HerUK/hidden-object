@@ -12,6 +12,7 @@ public class StageButton : MonoBehaviour {
     {
         DataController.Instance.ItemListNum = ItemListNum;
 		DataController.Instance.StageID = stageID;
-		Application.LoadLevel("basic");
+		Application.LoadLevel("game");
+
     }
 }

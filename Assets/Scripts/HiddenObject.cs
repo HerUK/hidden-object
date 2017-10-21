@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class HiddenObject : MonoBehaviour {
 
     bool IsFound = false;
+	/*
+	public AudioClip SFXClick;
+	*/
 
     public void OnClickObject()
     {
@@ -13,24 +16,14 @@ public class HiddenObject : MonoBehaviour {
         {
             IsFound = true;
             Debug.Log("Find it!");
-            GameObject circle = new GameObject();
-            /**
-            if (Input.GameObject(0))
-           {
-            //Debug.Log(Input.mousePosition);
-           
-            Ray ray = MainCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100f))
-            {
-                //Debug.Log(hit.point);
-                Debug.DrawLine(ray.origin, hit.point, Color.red);
-                Instantiate(EffectSmoke, hit.point, EffectSmoke.transform.rotation);
-                MainCamera.gameObject.GetComponent<AudioSource>().PlayOneShot(SFXClick);
-            }
 
-             }
+			/**
+
+			Instantiate(EffectSmoke, hit.point, EffectSmoke.transform.rotation);
+
             **/
+
+            GameObject circle = new GameObject();
             RectTransform rt = circle.AddComponent<RectTransform>();
             Image img = circle.AddComponent<Image>();
             circle.name = "Found";
@@ -56,7 +49,9 @@ public class HiddenObject : MonoBehaviour {
             GameController.Instance.bottomList[name].transform.GetChild(2).gameObject.SetActive(false);
 
             Destroy(gameObject, 1f);
-
+			/*
+			Destroy(cirlcle, 1f);
+			*/
         }
 
     }

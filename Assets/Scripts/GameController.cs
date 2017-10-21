@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.Purchasing;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -103,7 +104,9 @@ public class GameController : MonoBehaviour {
                 //Debug.Log(hit.point);
                 Debug.DrawLine(ray.origin, hit.point, Color.red);
                 Instantiate(EffectSmoke, hit.point, EffectSmoke.transform.rotation);
-                MainCamera.gameObject.GetComponent<AudioSource>().PlayOneShot(SFXClick);
+   
+				MainCamera.gameObject.GetComponent<AudioSource>().PlayOneShot(SFXClick);
+
             }
 
         }
@@ -166,27 +169,90 @@ public class GameController : MonoBehaviour {
 
             DataController.Instance.SaveGameData();
 
-            /**
-            List<ClearList> list = DataController.Instance.gameData.ClearList.;
-            if(string intance.stage_name == ClearList);
-            {
-                GameController.Instance.StageList.transform.GetChild(0).gameObject.SetActive(true);
-                GameController.Instance.StageList.transform.GetChild(1).gameObject.SetActive(false);
-                GameController.Instance.StageList.transform.GetChild(2).gameObject.SetActive(false);
-            }
+			string stageID = DataController.Instance.StageID;
+			int chapterNum = 0;
+			int stageNum = 0;
 
-            **/
+			try{
+				string[] stageIDsplit = stageID.Split ('-');
+				chapterNum = int.Parse(stageIDsplit[0]);
+				stageNum = int.Parse(stageIDsplit[1]);
+				stageNum++;
+				Debug.Log (chapterNum);
+				Debug.Log (stageNum);
+				string newStageID = string.Format("{0}-{1}",  chapterNum, stageNum);
+				Debug.Log(newStageID);
+				DataController.Instance.LoadMetaData();
+				MetaData metaData = DataController.Instance.metaData;
+				foreach (Pack pack in metaData.PackList)
+				{
+					Debug.Log(pack.PackName);
+					if(DataController.Instance.gameData.CurrentPackName == pack.PackName)
 
-            float timePassed = Time.time - gameStart;
-            int minutes = Mathf.FloorToInt(timePassed / 60);
-            int seconds = Mathf.FloorToInt(timePassed % 60);
-            string msg = string.Format("당신 기록 : {0}분 {1}초", minutes, seconds);
-            DialogDataAlert alert = new DialogDataAlert("전체 찾았습니다!", msg, delegate () {
-                Application.LoadLevel("game");
-            });
-            DialogManager.Instance.Push(alert);
+					{
+
+						if(pack.StageList.Contains(newStageID)){
+							DataController.Instance.StageID = newStageID;
+
+							float timePassed = Time.time - gameStart;
+							int minutes = Mathf.FloorToInt(timePassed / 60);
+							int seconds = Mathf.FloorToInt(timePassed % 60);
+							string msg = string.Format("당신 기록 : {0}분 {1}초", minutes, seconds);
+							DialogDataAlert alert = new DialogDataAlert("전체 찾았습니다!", msg, delegate () {
+								SceneManager.LoadScene("game");
+							});
+							DialogManager.Instance.Push(alert);
+
+						}else{
+
+
+							float timePassed = Time.time - gameStart;
+							int minutes = Mathf.FloorToInt(timePassed / 60);
+							int seconds = Mathf.FloorToInt(timePassed % 60);
+							string msg = string.Format("당신 기록 : {0}분 {1}초", minutes, seconds);
+							DialogDataAlert alert = new DialogDataAlert("전체 찾았습니다!", msg, delegate () {
+								SceneManager.LoadScene("basic");
+							});
+							DialogManager.Instance.Push(alert);
+						}
+					}
+				}
+				
+			}catch(System.Exception e){
+				
+			}
+
         }
     }
+
+	/**  
+		      public void  OnClickObject()
+		   	 {
+		        HintCount--;
+		        if(HintCount == 0)
+		        {
+					Application.LoadLevel("ad");
+		        }
+				else if(HintCount != 0)
+				{
+					Debug.Log("Hint");
+						if (!ObjctCheck)
+		             	{
+		                 ObjctCheck = true;
+		                 Debug.Log("Check!");
+		                 Destroy(gameObject.Text, 1f);
+		                 GameObject prefab = Resources.Load("Prefabs/BottomObject.img") as GameObject;
+		                 GameObject obj = Instantiate(prefab, bottomContent);
+		                 obj.name = check;
+		                 obj.GetComponentInChildren<Image>().img = check;
+		                 img.sprite = Resources.Load<Sprite>("Sprites/Find");
+
+		                 GameController.Instance.FindHiddenObject();
+
+		            	 }
+				}
+		  	  }
+		  	  */ 
 
 
     public void InitItemListData()
@@ -198,7 +264,7 @@ public class GameController : MonoBehaviour {
             Debug.Log(item.Name);
             GameObject prefab = Resources.Load("Prefabs/BottomObject") as GameObject;
             GameObject obj = Instantiate(prefab, bottomContent);
-            obj.name = item.Name;
+            obj.name = item.Name; 
             obj.GetComponentInChildren<Text>().text = item.Name;
             var rect = obj.GetComponent<RectTransform>();
 
@@ -214,27 +280,38 @@ public class GameController : MonoBehaviour {
             rect.Rotate(new Vector3(0, 0, item.BottomRotate));
 
             bottomList.Add(item.Name, obj);
-            /**  
-             if (!ObjctCheck)
-             {
-                 ObjctCheck = true;
-                 Debug.Log("Check!");
-                 Destroy(gameObject.Text, 1f);
-                 GameObject prefab = Resources.Load("Prefabs/BottomObject.img") as GameObject;
-                 GameObject obj = Instantiate(prefab, bottomContent);
-                 obj.name = check;
-                 obj.GetComponentInChildren<Image>().img = check;
-                 img.sprite = Resources.Load<Sprite>("Sprites/Find");
+            
 
-                 GameController.Instance.FindHiddenObject();
 
-             }
-             **/
+            
 
 
         }
     }
 
+	/*
+		public void ShowAd()
+		{
+		int i = 0;
+		foreach(string StageID in pack.StageList)
+		{
+            i = StageIDCount;
+            obj.transform.SetParent(Content);
+			obj.transform.localScale = new Vector3 (1f, 1f, 1f);
+
+			obj.GetComponentInChildren<Text> ().text = StageID;
+			obj.GetComponent<StageButton> ().stageID = StageID;
+			// -43, 100
+
+			int x = i % 2;
+
+		}
+
+			i += 1;
+
+        }
+		}
+	 */
 
         void ShowRewardedVideo()
         {
