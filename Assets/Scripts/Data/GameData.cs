@@ -10,6 +10,7 @@ public class GameData {
     public float TimePassed = 0f;
     public string LastHintAt;
 	public string CurrentPackName = "Basic";
+	public int ClearStageCount = 0;
     public List<string> ClearList;
 
 }

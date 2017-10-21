@@ -160,6 +160,13 @@ public class GameController : MonoBehaviour {
         ObjectCount--;
         if(ObjectCount == 0)
         {
+			DataController.Instance.gameData.ClearStageCount += 1;
+
+			if (DataController.Instance.gameData.ClearStageCount >= 5) {
+				DataController.Instance.gameData.ClearStageCount = 0;
+				ShowVideo ();
+			}
+
 			string stage_name = DataController.Instance.StageID;
             if (!DataController.Instance.gameData.ClearList.Contains(stage_name))
             {
@@ -203,8 +210,7 @@ public class GameController : MonoBehaviour {
 							DialogManager.Instance.Push(alert);
 
 						}else{
-
-
+							
 							float timePassed = Time.time - gameStart;
 							int minutes = Mathf.FloorToInt(timePassed / 60);
 							int seconds = Mathf.FloorToInt(timePassed % 60);
@@ -223,6 +229,34 @@ public class GameController : MonoBehaviour {
 
         }
     }
+
+	public void ShowHint(){
+		if (DataController.Instance.gameData.Hint > 0) {
+			DataController.Instance.gameData.Hint--;
+			DataController.Instance.SaveGameData ();
+
+			GameObject[] objs = GameObject.FindGameObjectsWithTag ("HiddenObject");
+
+			foreach (GameObject obj in objs) {
+				if (!obj.GetComponent<HiddenObject> ().IsFound) {
+				
+					obj.GetComponent<HiddenObject> ().OnClickObject ();
+					break;
+				}
+			}
+
+		} else {
+			DialogDataConfirm confirm = new DialogDataConfirm ("광고 보고 힌트", "광고를 시청하시겠습니까?",
+				delegate(bool yn) {
+					Debug.Log(yn);
+					if(yn){
+						ShowRewardedVideo();
+					}
+
+			});
+			DialogManager.Instance.Push (confirm);
+		}
+	}
 
 	/**  
 		      public void  OnClickObject()
@@ -312,33 +346,40 @@ public class GameController : MonoBehaviour {
 		}
 	 */
 
-        void ShowRewardedVideo()
+	void ShowVideo()
+	{
+		Debug.Log ("ShowVideo");
+
+		Advertisement.Show("video");
+	}
+    void ShowRewardedVideo()
+    {
+	Debug.Log ("ShowRewardedVideo");
+        var options = new ShowOptions();
+        options.resultCallback = HandleShowResult;
+
+        Advertisement.Show("rewardedVideo", options);
+    }
+
+    void HandleShowResult(ShowResult result)
+    {
+        if (result == ShowResult.Finished)
         {
-            var options = new ShowOptions();
-            options.resultCallback = HandleShowResult;
+            Debug.Log("Video completed - Offer a reward to the player");
+            DataController.Instance.gameData.Hint += 1;
+            DataController.Instance.SaveGameData();
 
-            Advertisement.Show("rewardedVideo", options);
         }
-
-        void HandleShowResult(ShowResult result)
+        else if (result == ShowResult.Skipped)
         {
-            if (result == ShowResult.Finished)
-            {
-                Debug.Log("Video completed - Offer a reward to the player");
-                DataController.Instance.gameData.Hint += 1;
-                DataController.Instance.SaveGameData();
+            Debug.LogWarning("Video was skipped - Do NOT reward the player");
 
-            }
-            else if (result == ShowResult.Skipped)
-            {
-                Debug.LogWarning("Video was skipped - Do NOT reward the player");
-
-            }
-            else if (result == ShowResult.Failed)
-            {
-                Debug.LogError("Video failed to show");
-            }
         }
+        else if (result == ShowResult.Failed)
+        {
+            Debug.LogError("Video failed to show");
+        }
+    }
 
 
 

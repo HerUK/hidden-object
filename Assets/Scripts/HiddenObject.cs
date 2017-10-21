@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HiddenObject : MonoBehaviour {
 
-    bool IsFound = false;
+    public bool IsFound = false;
 	/*
 	public AudioClip SFXClick;
 	*/
