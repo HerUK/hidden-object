@@ -33,7 +33,6 @@ public class GameController : MonoBehaviour {
 
     **/
 
-    bool ObjctCheck = false;
 
 #if UNITY_IOS
     private string gameId = "1553201";
